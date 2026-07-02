@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA World Cup 2026 - The Future of Football</title>
+    <style>
+        :root {
+            --primary: #1e3a8a; /* Deep Blue */
+            --accent: #ef4444;  /* Red */
+            --light: #f3f4f6;
+            --dark: #111827;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #dc2626;
+            transform: scale(1.05);
+        }
+
+        /* Content Sections */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            height: 200px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-weight: bold;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        /* Stats Section */
+        .stats {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            color: var(--accent);
+        }
+
+        .stat-item p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: #9ca3af;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            nav ul { display: none; } /* Simplified for demo */
+            .logo { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="logo">FIFA <span>WC 2026</span></div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#hosts">Host Nations</a></li>
+                <li><a href="#teams">Teams</a></li>
+                <li><a href="#tickets">Tickets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>United by Football</h1>
+        <p>The 2026 FIFA World Cup is the first World Cup to feature 48 teams, hosted across three nations.</p>
+        <a href="#about" class="btn">Learn More</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+        <h2>About the Tournament</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-img">Trophy Image</div>
+                <div class="card-content">
+                    <div class="card-title">Expanded Format</div>
+                    <p>For the first time in history, 48 teams will compete for the trophy, increasing the number of matches to 104.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">Host Cities</div>
+                <div class="card-content">
+                    <div class="card-title">Three Host Nations</div>
+                    <p>The tournament will be jointly hosted by Canada, Mexico, and the United States, spanning 16 host cities.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">Kickoff Date</div>
+                <div class="card-content">
+                    <div class="card-title">Summer 2026</div>
+                    <p>Expect the action to start in June 2026, culminating in a grand final at MetLife Stadium in New Jersey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <h2>Tournament by the Numbers</h2>
+        <div class="stat-grid">
+            <div class="stat-item">
+                <h3>48</h3>
+                <p>Teams</p>
+            </div>
+            <div class="stat-item">
+                <h3>16</h3>
+                <p>Host Cities</p>
+            </div>
+            <div class="stat-item">
+                <h3>3</h3>
+                <p>Host Nations</p>
+            </div>
+            <div class="stat-item">
+                <h3>104</h3>
+                <p>Total Matches</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hosts Section -->
+    <section id="hosts" class="container">
+        <h2>Host Nations</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-img">Canada Map</div>
+                <div class="card-content">
+                    <div class="card-title">Canada</div>
+                    <p>Featuring matches in Vancouver and Toronto, bringing the world's biggest stage to the north.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">Mexico Map</div>
+                <div class="card-content">
+                    <div class="card-title">Mexico</div>
+                    <p>Home to the legendary Estadio Azteca, the only stadium to host three World Cup finals.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">USA Map</div>
+                <div class="card-content">
+                    <div class="card-title">United States</div>
+                    <p>Hosting the majority of the matches across 11 cities, including New York, Los Angeles, and Miami.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo">FIFA <span>WC 2026</span></div>
+        <p>&copy; 2026 Fan Page. Not officially affiliated with FIFA.</p>
+        <p>Designed for demonstration purposes.</p>
+    </footer>
+
+    <script>
+        // Simple smooth scroll behavior for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        console.log("FIFA World Cup 2026 page loaded successfully!");
+    </script>
+</body>
+</html>
